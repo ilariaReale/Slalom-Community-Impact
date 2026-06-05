@@ -4,239 +4,465 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ilaria Reale: Slalom Community Impact</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: 'Calibri', 'Arial', sans-serif;
-    background: #f5f5f5;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding: 2rem;
-  }
-  .card {
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 14px;
-    padding: 2rem;
-    max-width: 960px;
-    width: 100%;
-  }
-  .title {
-    font-size: 22px;
-    font-weight: 400;
-    color: #1a1a1a;
-    margin-bottom: 1.5rem;
-    line-height: 1.3;
-  }
-  .title strong { font-weight: 700; }
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 48px 1fr;
-    gap: 1.25rem;
-    align-items: start;
-  }
-  .panel-label {
-    font-size: 10px;
-    font-weight: 700;
-    color: #888;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 1rem;
-  }
-  .item { display: flex; gap: 10px; margin-bottom: 1.1rem; align-items: flex-start; }
-  .icon-box {
-    width: 36px; height: 36px;
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-    font-size: 15px;
-    font-weight: 700;
-  }
-  .icon-teal { background: #E1F5EE; color: #0F6E56; }
-  .icon-blue { background: #E6F1FB; color: #185FA5; }
-  .icon-purple { background: #EEEDFE; color: #534AB7; }
-  .item-title {
-    font-size: 13px; font-weight: 700;
-    color: #1a1a1a; margin: 0 0 3px;
-  }
-  .item-text {
-    font-size: 12px; color: #555;
-    margin: 0; line-height: 1.6;
-  }
-  .proof {
-    font-size: 11px; color: #0F6E56;
-    font-weight: 700; margin: 4px 0 0;
-  }
-  .badges { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 5px; }
-  .badge {
-    font-size: 10px; font-weight: 700;
-    padding: 2px 8px; border-radius: 4px;
-  }
-  .badge-teal { background: #E1F5EE; color: #085041; }
-  .badge-blue { background: #E6F1FB; color: #0C447C; }
-  .badge-purple { background: #EEEDFE; color: #3C3489; }
-  .center-col {
-    display: flex; align-items: center;
-    justify-content: center; height: 100%;
-  }
-  .tools-box {
-    background: #f7f7f7;
-    border: 1px solid #e5e5e5;
-    border-radius: 8px;
-    padding: 0.85rem;
-    margin-top: 0.5rem;
-  }
-  .tools-title {
-    font-size: 11px; font-weight: 700;
-    color: #1a1a1a; margin-bottom: 0.6rem;
-  }
-  .tools-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem; }
-  .tools-label { font-size: 10px; font-weight: 700; color: #888; margin: 0 0 3px; }
-  .tools-text { font-size: 11px; color: #1a1a1a; margin: 0; line-height: 1.55; }
+:root {
+  --bg: #F4EFE6;
+  --paper: #FBF6EC;
+  --ink: #141413;
+  --ink-soft: #2D2A26;
+  --muted: #8B8378;
+  --rule: #1F1E1B;
+  --hairline: rgba(20,20,19,0.18);
+  --forest: #1F3D2E;
+  --ocean: #234E78;
+  --ember: #C9482A;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+body {
+  font-family: 'Instrument Sans', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.55;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.92' numOctaves='2'/><feColorMatrix values='0 0 0 0 0.08 0 0 0 0 0.08 0 0 0 0 0.06 0 0 0 0.22 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  opacity: 0.3;
+  mix-blend-mode: multiply;
+}
+
+.page {
+  position: relative;
+  z-index: 2;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 3rem 3rem 3.5rem;
+}
+
+/* ── HERO ──────────────────────────────────────────── */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2.5rem;
+  align-items: end;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.hero-title {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+  font-weight: 380;
+  font-size: clamp(34px, 4.4vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.018em;
+  color: var(--ink);
+  max-width: 22ch;
+}
+.hero-title .name { font-weight: 600; }
+.hero-title .accent {
+  font-style: italic;
+  font-weight: 360;
+  font-variation-settings: "opsz" 144, "SOFT" 80;
+  color: var(--ember);
+}
+
+.hero-meta {
+  text-align: right;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  line-height: 1.9;
+}
+.hero-meta a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--ink);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.hero-meta a:hover { color: var(--ember); border-color: var(--ember); }
+.hero-meta .label { color: var(--muted); margin-right: 0.5rem; }
+
+/* ── SECTION ──────────────────────────────────────── */
+.section { padding: 2.8rem 0 0.5rem; }
+
+.section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.section-label::before {
+  content: "";
+  width: 24px; height: 1.5px;
+  background: var(--ember);
+  display: inline-block;
+}
+
+/* ── 30/60/90 ─────────────────────────────────────── */
+.acts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.act {
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  border-top: 2px solid var(--accent, var(--ember));
+  padding: 1.5rem 1.4rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+}
+.act.one   { --accent: var(--forest); }
+.act.two   { --accent: var(--ocean); }
+.act.three { --accent: var(--ember); }
+
+.act-day {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.act-title {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+  font-weight: 420;
+  font-size: 26px;
+  line-height: 1.1;
+  letter-spacing: -0.014em;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+}
+.act-title em {
+  font-style: italic;
+  font-weight: 380;
+  font-variation-settings: "opsz" 144, "SOFT" 80;
+  color: var(--accent);
+}
+
+.act-body {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.bullets {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.bullet {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  padding: 0.4rem 0.55rem;
+  background: var(--bg);
+  border: 1px solid var(--hairline);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+}
+.bullet b { font-weight: 600; color: var(--ink); }
+
+/* ── TWO-COLUMN SPREAD ────────────────────────────── */
+.spread {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding-top: 0.2rem;
+}
+
+.col-title {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 1.6rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--rule);
+}
+.col-title em {
+  font-style: italic;
+  font-weight: 380;
+  font-variation-settings: "opsz" 144, "SOFT" 80;
+  color: var(--forest);
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 1rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px dashed var(--hairline);
+}
+.entry:last-child { border-bottom: none; }
+
+.entry-num {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-variation-settings: "opsz" 144, "SOFT" 100;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--ember);
+  line-height: 1.1;
+  padding-top: 0.15rem;
+}
+
+.entry-title {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+  font-weight: 480;
+  font-size: 17px;
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  margin-bottom: 0.45rem;
+}
+
+.entry-body {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.chips {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-bottom: 0.6rem;
+}
+.chip {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  padding: 3px 8px;
+  text-transform: uppercase;
+  border: 1px solid var(--hairline);
+  color: var(--ink);
+  background: var(--paper);
+}
+
+/* ── FOOTER QUOTE ─────────────────────────────────── */
+.footer {
+  margin-top: 3rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--rule);
+}
+.quote {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-variation-settings: "opsz" 144, "SOFT" 80;
+  font-size: 19px;
+  font-weight: 380;
+  line-height: 1.45;
+  color: var(--ink);
+  max-width: 56ch;
+  letter-spacing: -0.003em;
+  position: relative;
+  padding-left: 1.6rem;
+}
+.quote::before {
+  content: "\201C";
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 48px;
+  color: var(--ember);
+  line-height: 0;
+  position: absolute;
+  left: 0;
+  top: 18px;
+  font-weight: 400;
+}
+
+/* ── ENTRANCE ─────────────────────────────────────── */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero, .section, .footer {
+  animation: rise 0.85s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.hero { animation-delay: 0.05s; }
+.section:nth-of-type(2) { animation-delay: 0.18s; }
+.section:nth-of-type(3) { animation-delay: 0.28s; }
+.footer { animation-delay: 0.4s; }
+
+/* ── RESPONSIVE ───────────────────────────────────── */
+@media (max-width: 880px) {
+  .page { padding: 1.6rem 1.3rem 2.6rem; }
+  .hero { grid-template-columns: 1fr; gap: 1.2rem; align-items: start; }
+  .hero-meta { text-align: left; }
+  .acts { grid-template-columns: 1fr; }
+  .spread { grid-template-columns: 1fr; gap: 2.2rem; }
+}
 </style>
 </head>
 <body>
-<div class="card">
 
-  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.25rem">
-    <p class="title" style="margin:0"><strong>Ilaria Reale</strong>: the strategic choice for Slalom Community Impact</p>
-    <div style="text-align:right;flex-shrink:0;margin-left:1.5rem">
-      <p style="font-size:12px;color:#555;margin:0 0 2px">Seattle, WA</p>
-      <a href="https://linkedin.com/in/ilariareale" style="font-size:12px;color:#0F6E56;text-decoration:none">linkedin.com/in/ilariareale</a>
+<main class="page">
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1 class="hero-title">
+      <span class="name">Ilaria Reale</span>: the <span class="accent">strategic</span> choice for Slalom Community Impact
+    </h1>
+    <div class="hero-meta">
+      <div><span class="label">Loc</span>Seattle, WA</div>
+      <div><span class="label">Web</span><a href="https://linkedin.com/in/ilariareale">linkedin.com/in/ilariareale</a></div>
     </div>
-  </div>
+  </header>
 
-  <!-- 30-60-90 PATHWAY -->
-  <div style="margin-bottom:2rem;border-bottom:1px solid #e0e0e0;padding-bottom:1.5rem">
-    <p style="font-size:10px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.25rem">My first 90 days at Slalom</p>
+  <!-- 30 / 60 / 90 -->
+  <section class="section">
+    <div class="section-label">My first 90 days at Slalom</div>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem">
+    <div class="acts">
 
-      <!-- DAY 30 -->
-      <div style="background:#E1F5EE;border-radius:10px;padding:1.1rem">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:0.75rem">
-          <div style="background:#0F6E56;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px">Day 1–30</div>
-          <span style="font-size:12px;font-weight:700;color:#085041">Listen &amp; map</span>
+      <article class="act one">
+        <div class="act-day">Day 1&ndash;30</div>
+        <h2 class="act-title">Listen <em>&amp; map</em></h2>
+        <p class="act-body">Study all existing programs, KPIs, and data flows across the 11 employee communities. Map governance structures, tools, and engagement levels. Build a clear baseline before acting.</p>
+      </article>
+
+      <article class="act two">
+        <div class="act-day">Day 31&ndash;60</div>
+        <h2 class="act-title">Connect <em>&amp; engage</em></h2>
+        <p class="act-body">Run listening sessions with community leads and employees. Understand needs, gaps, and what's already working. Make people feel heard and involved from day one, not managed.</p>
+      </article>
+
+      <article class="act three">
+        <div class="act-day">Day 61&ndash;90</div>
+        <h2 class="act-title">Pilot <em>&amp; energize</em></h2>
+        <p class="act-body">Design and launch a pilot cross-office sustainability challenge: starting with one concrete, everyday action like carpooling to work.</p>
+        <div class="bullets">
+          <div class="bullet"><b>&#127942; Friendly competition:</b>&nbsp;offices earn points for sustainable actions</div>
+          <div class="bullet"><b>&#127918; Gamification:</b>&nbsp;leaderboard, rewards, and recognition</div>
+          <div class="bullet"><b>&#129309; Bonding:</b>&nbsp;shared goals that connect people across offices</div>
         </div>
-        <p style="font-size:12px;color:#085041;line-height:1.6;margin:0">Study all existing programs, KPIs, and data flows across the 11 employee communities. Map governance structures, tools, and engagement levels. Build a clear baseline before acting.</p>
-      </div>
-
-      <!-- DAY 60 -->
-      <div style="background:#E6F1FB;border-radius:10px;padding:1.1rem">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:0.75rem">
-          <div style="background:#185FA5;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px">Day 31–60</div>
-          <span style="font-size:12px;font-weight:700;color:#0C447C">Connect &amp; engage</span>
-        </div>
-        <p style="font-size:12px;color:#0C447C;line-height:1.6;margin:0">Run listening sessions with community leads and employees. Understand needs, gaps, and what's already working. Make people feel heard and involved from day one, not managed.</p>
-      </div>
-
-      <!-- DAY 90 -->
-      <div style="background:#EEEDFE;border-radius:10px;padding:1.1rem">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:0.75rem">
-          <div style="background:#534AB7;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px">Day 61–90</div>
-          <span style="font-size:12px;font-weight:700;color:#3C3489">Pilot &amp; energize</span>
-        </div>
-        <p style="font-size:12px;color:#3C3489;line-height:1.6;margin:0 0 0.75rem">Design and launch a pilot cross-office sustainability challenge: starting with one concrete, everyday action like carpooling to work.</p>
-        <div style="display:flex;flex-direction:column;gap:5px">
-          <div style="background:#fff;border-radius:6px;padding:6px 10px;font-size:11px;color:#3C3489;font-weight:700">🏆 Friendly competition: offices earn points for sustainable actions</div>
-          <div style="background:#fff;border-radius:6px;padding:6px 10px;font-size:11px;color:#3C3489;font-weight:700">🎮 Gamification: leaderboard, rewards, and recognition</div>
-          <div style="background:#fff;border-radius:6px;padding:6px 10px;font-size:11px;color:#3C3489;font-weight:700">🤝 Bonding: shared goals that connect people across offices</div>
-        </div>
-      </div>
+      </article>
 
     </div>
-  </div>
+  </section>
 
-  <div class="grid">
+  <!-- TWO-COLUMN SPREAD -->
+  <section class="section">
+    <div class="spread">
 
-    <!-- LEFT PANEL -->
-    <div>
-      <p class="panel-label">Operational excellence &amp; relational leadership</p>
+      <div>
+        <h3 class="col-title">Operational excellence <em>&amp; relational leadership</em></h3>
 
-      <div class="item">
-        <div class="icon-box icon-teal">01</div>
-        <div>
-          <p class="item-title">Managing complexity and chaos</p>
-          <p class="item-text">Coordinated 3 teams simultaneously across R&D, operations, and commercial, in startup environments with no playbook, no precedent, and constant shifting priorities.</p>
-        </div>
+        <article class="entry">
+          <div class="entry-num">01</div>
+          <div>
+            <h4 class="entry-title">Managing complexity and chaos</h4>
+            <p class="entry-body">Coordinated 3 teams simultaneously across R&amp;D, operations, and commercial, in startup environments with no playbook, no precedent, and constant shifting priorities.</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry-num">02</div>
+          <div>
+            <h4 class="entry-title">International &amp; adaptable profile</h4>
+            <p class="entry-body">5 countries, 3 languages, EU regulatory fluency. Navigated cultural and institutional contexts across Italy, Sweden, the Netherlands, Spain, and the US.</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry-num">03</div>
+          <div>
+            <h4 class="entry-title">Strategic stakeholder management</h4>
+            <p class="entry-body">Primary point of contact for investors, business angels, and EU public funders: running quarterly alignment meetings, managing data rooms, and navigating concerns with clarity.</p>
+          </div>
+        </article>
       </div>
 
-      <div class="item">
-        <div class="icon-box icon-blue">02</div>
-        <div>
-          <p class="item-title">International &amp; adaptable profile</p>
-          <p class="item-text">5 countries, 3 languages, EU regulatory fluency. Navigated cultural and institutional contexts across Italy, Sweden, the Netherlands, Spain, and the US.</p>
-        </div>
-      </div>
+      <div>
+        <h3 class="col-title">Technical expertise <em>&amp; impact storytelling</em></h3>
 
-      <div class="item">
-        <div class="icon-box icon-purple">03</div>
-        <div>
-          <p class="item-title">Strategic stakeholder management</p>
-          <p class="item-text">Primary point of contact for investors, business angels, and EU public funders: running quarterly alignment meetings, managing data rooms, and navigating concerns with clarity.</p>
-        </div>
-      </div>
-    </div>
+        <article class="entry">
+          <div class="entry-num">01</div>
+          <div>
+            <div class="chips">
+              <span class="chip">GRI</span>
+              <span class="chip">CSRD</span>
+              <span class="chip">CDP</span>
+              <span class="chip">EcoVadis</span>
+              <span class="chip">SDG 12 &amp; 14</span>
+            </div>
+            <h4 class="entry-title">Mastery of global frameworks</h4>
+            <p class="entry-body">Designed and implemented ESG performance frameworks with SDG 12 and 14 as operational quarterly metrics: not labels, but measurable KPIs tied to R&amp;D and production outputs.</p>
+          </div>
+        </article>
 
-    <!-- CENTER -->
-    <div class="center-col">
-      <svg width="44" height="280" viewBox="0 0 44 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="20" y="0" width="4" height="280" fill="#b8ddd0" rx="2"/>
-        <circle cx="22" cy="24" r="16" fill="#9FE1CB"/>
-        <circle cx="22" cy="62" r="10" fill="#5DCAA5"/>
-        <circle cx="22" cy="94" r="16" fill="#1D9E75"/>
-        <circle cx="22" cy="132" r="10" fill="#5DCAA5"/>
-        <circle cx="22" cy="164" r="16" fill="#9FE1CB"/>
-        <circle cx="22" cy="202" r="10" fill="#5DCAA5"/>
-        <circle cx="22" cy="234" r="16" fill="#1D9E75"/>
-      </svg>
-    </div>
+        <article class="entry">
+          <div class="entry-num">02</div>
+          <div>
+            <div class="chips">
+              <span class="chip">&euro;1M+ grant portfolio</span>
+              <span class="chip">~60% success rate</span>
+            </div>
+            <h4 class="entry-title">Translating data into value</h4>
+            <p class="entry-body">Reported impact across Rundit, WorldFavor, and Science Based Targets: transforming complex ESG data into clear narratives for investors, funders, and institutional audiences.</p>
+          </div>
+        </article>
 
-    <!-- RIGHT PANEL -->
-    <div>
-      <p class="panel-label">Technical expertise &amp; impact storytelling</p>
-
-      <div style="margin-bottom:1.1rem">
-        <div class="badges">
-          <span class="badge badge-teal">GRI</span>
-          <span class="badge badge-teal">CSRD</span>
-          <span class="badge badge-teal">CDP</span>
-          <span class="badge badge-teal">EcoVadis</span>
-          <span class="badge badge-teal">SDG 12 &amp; 14</span>
-        </div>
-        <p class="item-title">Mastery of global frameworks</p>
-        <p class="item-text">Designed and implemented ESG performance frameworks with SDG 12 and 14 as operational quarterly metrics: not labels, but measurable KPIs tied to R&D and production outputs.</p>
-      </div>
-
-      <div style="margin-bottom:1.1rem">
-        <div class="badges">
-          <span class="badge badge-blue">€1M+ grant portfolio</span>
-          <span class="badge badge-blue">~60% success rate</span>
-        </div>
-        <p class="item-title">Translating data into value</p>
-        <p class="item-text">Reported impact across Rundit, WorldFavor, and Science Based Targets: transforming complex ESG data into clear narratives for investors, funders, and institutional audiences.</p>
-      </div>
-
-      <div style="margin-bottom:1rem">
-        <div class="badges">
-          <span class="badge badge-purple">Excel</span>
-          <span class="badge badge-purple">Power BI</span>
-          <span class="badge badge-purple">Asana</span>
-          <span class="badge badge-purple">HubSpot</span>
-        </div>
-        <p class="item-title">AI-forward &amp; data-driven mindset</p>
-        <p class="item-text">Built financial models, dashboards, and forecasting trackers from scratch: combining data fluency with the ability to turn numbers into decisions.</p>
+        <article class="entry">
+          <div class="entry-num">03</div>
+          <div>
+            <div class="chips">
+              <span class="chip">Excel</span>
+              <span class="chip">Power BI</span>
+              <span class="chip">Asana</span>
+              <span class="chip">HubSpot</span>
+            </div>
+            <h4 class="entry-title">AI-forward &amp; data-driven mindset</h4>
+            <p class="entry-body">Built financial models, dashboards, and forecasting trackers from scratch: combining data fluency with the ability to turn numbers into decisions.</p>
+          </div>
+        </article>
       </div>
 
     </div>
+  </section>
 
-  </div>
+  <!-- QUOTE -->
+  <footer class="footer">
+    <p class="quote">Community impact is not a campaign. It is a craft. Done well, it makes a company feel like a place worth belonging to.</p>
+  </footer>
 
+</main>
 
-</div>
-
-</div>
 </body>
 </html>
